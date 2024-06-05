@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Bookmarker</title>
+  <meta
+    content=" A web design for Bokmarker website using HTML, CSS and javaScript and it's a website helps you to Bookmark your favourate websites."
+    name="description" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Sevillana&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap"
+    rel="stylesheet">
+
+  <!-- ===== Font Awesome Icon Library ===== -->
+  <link rel="stylesheet" href="assets/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.min.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/—Pngtree—bookmark icon vector illustration in_4246145.png" rel="icon" />
+  <link href="assets/img/—Pngtree—bookmark icon vector illustration in_4246145.png" rel="apple-touch-icon" />
+
+  <!-- bootstrap CSS Files -->
+  <link href="assets/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="py-5 ">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="py-2 position-relative">Bookmarker</h1>
+      <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="site-name w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label>
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName"
+            oninput="nameIsValid(this)">
+        </div>
+        <div class="site-url w-100 d-flex flex-column justify-content-center">
+          <label for="bookmarkURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+          <input oninput="urlIsValid(this)" type="url" placeholder="Website URL  ex : Google.com " class="form-control"
+            id="bookmarkURL">
+        </div>
+        <button class="btn px-5" id="submitBtn">Submit</button>
+      </div>
+      <table class="table mt-4 text-center">
+        <thead>
+          <tr>
+            <th class="text-capitalize">index</th>
+            <th class="text-capitalize">Website Name</th>
+            <th class="text-capitalize">Visit</th>
+            <th class="text-capitalize">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableContent">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="closeee"
+    class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+    <div class="box-conent p-4 rounded-2 shadow-lg">
+      <header class="box-header w-100 d-flex justify-content-between align-items-center">
+        <button id="closeBtn" class="btn border-0">
+          <i class="fa-solid fa-xmark close fs-3"></i>
+        </button>
+      </header>
+      <div class="icon d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-triangle-exclamation fa-beat" style="color: #fec260;"></i>
+      </div>
+      <p>
+        Site Name or Url is not valid, Please follow the rules below :
+      </p>
+      <ol class="rules list-unstyled ">
+        <li>
+          <i class="fa-regular fa-circle-right p-2"></i>Site name must
+          contain at least 3 characters.
+        </li>
+        <li>
+          <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+          valid one. ex : Google.com
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="assets/main.js"></script>
+</body>
+
+</html>

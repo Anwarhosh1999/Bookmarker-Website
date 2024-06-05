@@ -1,0 +1,141 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-colorr: #1e1648;
+}
+
+body {
+  background-color: #ff2e4d;
+  font-family: "Poppins", sans-serif;
+  color: #352e28;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  color: #1e1648;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 5%;
+  left: 0;
+  bottom: 5px;
+  background-color: #fec260;
+  transition: height 750ms, width 150ms;
+  z-index: -1;
+}
+
+h1:hover::before {
+  height: 50%;
+  width: 100%;
+}
+
+.bookmark-body {
+  border-width: 2px 0 2px 0;
+  border-style: dashed;
+  border-color: #1e1648;
+}
+
+.bookmark-body h2 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #1e1648;
+  /* background-image: linear-gradient(to right, #1e1648, #352e28);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  transition: all 550ms;
+}
+
+.bookmark-body h2:hover {
+  /* background-image: linear-gradient(to right, #fec260, #fec260); */
+  color: #fec260;
+}
+
+label {
+  color: #1e1648;
+}
+
+.bookmark-body .btn {
+  color: white;
+  background-color: #1e1648;
+  border-color: #1e1648;
+  border-width: 3px;
+}
+
+.bookmark-body .btn:hover {
+  color: #1e1648;
+  background-color: transparent;
+  border-color: #1e1648;
+}
+#closeee .btn {
+  color: #ff2e4d;
+}
+
+#closeee .btn:hover {
+  color: #1e1648;
+  background-color: #ff2e4d;
+  border-color: #ff2e4d;
+}
+
+.table {
+  --bs-table-bg: var(--bg-colorr);
+  border-color: #1e1648;
+  --bs-table-color: white;
+  border-collapse: separate;
+}
+
+th {
+  border-radius: 3%;
+}
+
+td {
+  vertical-align: middle;
+  border-radius: 3%;
+}
+
+td .btn-visit {
+  background-color: #fec260;
+}
+
+td .btn-delete {
+  background-color: #ff2e4d;
+}
+
+.icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.box-conent {
+  background-color: #1e1648;
+  color: #ff2e4d;
+}
+
+.box-header button {
+  margin-left: auto;
+}
+
+.box-info {
+  background-color: #0007;
+}
+
+td .btn-visit:hover {
+  color: #f8ff93;
+  border-color: #f8ff93;
+}
+
+td .btn-delete:hover {
+  color: #f77272;
+  border-color: #f77272;
+}
